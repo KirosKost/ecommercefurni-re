@@ -1,0 +1,437 @@
+﻿{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}О нас{% endblock %}
+{% block content %}
+<body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+        <!--Use class "navbar-fixed" or "navbar-default" -->
+        <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+        <!-- ======================== Navigation ======================== -->
+
+        {% include 'header.html' %}
+        <!-- ========================  Main header ======================== -->
+
+        <section class="main-header main-header-blog" style="background-image:url({% static 'images/gallery-1.jpg' %})">
+            <header>
+                <div class="container text-center">
+                    <h2 class="h2 title">Our story</h2>
+                    <p class="subtitle">Делаем все с любовью</p>
+                    <ol class="breadcrumb breadcrumb-inverted">
+                        <li><a href="{% url 'home' %}"><span class="icon icon-home"></span></a></li>
+                        <li><a class="active" href="{% url 'about' %}">About</a></li>
+                    </ol>
+                </div>
+            </header>
+        </section>
+
+        <!-- ================== Intro section default ================== -->
+
+        <section class="our-team">
+            <div class="container">
+
+                <!-- === Our team header === -->
+
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <h1 class="h2 title">Познакомьтесь с нашей командой</h1>
+                        <div class="text">
+                            <p>Наша проффесиональная команда работает на рынке с 2002 года и нацелена на большой результат.Мебель,которую мы выпускаем делиться уютом у каждого нашего клиента</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === Our team === -->
+
+                <div class="team">
+
+                    <div class="row">
+
+                        <!-- === team member === -->
+
+                        {% for t in teams %}
+                        <div class="col-sm-3">
+                            <article>
+                                <div class="details details-text">
+                                    <div class="inner">
+                                        <h3 class="title">{{ t.name }}</h3>
+                                        <h6 class="title">{{ t.status }}</h6>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="{{ t.img.url }}" alt="" />
+                                </div>
+                                <div class="details details-social">
+                                    <div class="inner">
+                                        <a href="{{ t.phone }}"><i class="fa fa-phone"></i></a>
+                                        <a href="{{ t.mail }}"><i class="fa fa-envelope"></i></a>
+                                        <a href="{{ t.instagram }}"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                            </article>
+                        </div>
+                        {% endfor %}
+
+
+                    </div> <!--/row-->
+                    <!-- === button more === -->
+
+                    <div class="wrapper-more">
+                        <a href="contact.html" class="btn btn-clean-dark">Contact us</a>
+                    </div>
+                </div> <!--/team-->
+            </div>
+        </section>
+
+        <!-- ================== Banner ================== -->
+
+        <section class="banner" style="background-image:url({% static 'images/gallery-7.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <h1 class="h2 title">Мы любим свою работу</h1>
+                        <div class="text">
+                            <p>
+                                Lorem ipsum folor sit amet, consenuer adispicing elit mast. Curarbitur tristique lacinia mi,
+                                vitae consector oido efficitur nec. Phasellus velit felis, fermentum in enim. Lorem ipsum dolor sit amet,
+                                censectur adispcing elit curabitur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================  Cards ======================== -->
+
+        <section class="cards">
+
+            <!-- === cards header === -->
+
+             <section class="blog blog-block">
+
+            <div class="container">
+
+                <!-- === blog header === -->
+
+                <header>
+                    <div class="row"><header>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h1 class="h2 title">Блог</h1>
+                            <div class="text">
+                                <p>Посмотрите статьи, которые помогут вам в выборе мебели</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                    <!-- === blog-item === -->
+                    {% for p in posts %}
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="{% url 'post_detail' p.pk %}">
+                                <div class="image">
+                                    {% if p.photo %}
+                                    <p><img src="{{ p.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% endif %}
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">{{ p.date }}</div>
+                                    <div class="title">
+                                        <h2 class="h3">{{ p.title }}</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>{{ p.body }}</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span href="{% url 'post_detail' p.pk %}" class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div> <!--/row-->
+                <!-- === button more === -->
+
+                <div class="wrapper-more">
+                    <a href="/blog" class="btn btn-main">Перейти в блог</a>
+                </div>
+
+            </div> <!--/container-->
+        </section>
+
+        <!-- ========================  History ======================== -->
+
+        <section class="history">
+            <div class="container">
+
+                <!-- === History header === -->
+
+                <header>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h1 class="h2 title">Наши истории</h1>
+                            <div class="text">
+                                <p>Шаг за шагом.Как создавался beknur-mebel!</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- === row item === -->
+
+                <div class="row row-block">
+                    <div class="col-md-5 history-image" style="background-image:url({% static 'images/blog-3.jpg' %})">
+                        <div class="history-title">
+                            <h2 class="title">1930</h2>
+                            <p>The begining</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 history-desc">
+                        <div class="h5 title">This is how it's began</div>
+                        <p>
+                            Bust master shore what the sainted store tell stood sitting word thy
+                            unbrokenquit tossed more beguiling to rare stood take.
+                            Sent that maiden entrance door the and i to if me entrance the startled
+                            yore the sainted velvet raven still bird cushioned more then quoth and just a lenore back
+                        </p>
+                        <p>
+                            Leave till the and let nameless lenore the followed or shorn wide mystery quoth agreeing
+                            the lore myself soul its nevermore lenore mortals this the still plainly thereat on thinking
+                            the door above a have of hesitating longer i and that as mefilled now lord marvelled me i of be.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- === row item === -->
+                <div class="row row-block">
+                    <div class="col-md-5 history-image" style="background-image:url({% static 'images/blog-4.jpg' %})">
+                        <div class="history-title">
+                            <h2 class="title">1935</h2>
+                            <p>Firs 5 years</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 history-desc">
+                        <div class="h5 title">Love at the first sight</div>
+                        <p>
+                            Bust master shore what the sainted store tell stood sitting word thy
+                            unbrokenquit tossed more beguiling to rare stood take.
+                            Sent that maiden entrance door the and i to if me entrance the startled
+                            yore the sainted velvet raven still bird cushioned more then quoth and just a lenore back
+                        </p>
+                    </div>
+                </div>
+
+                <!-- === row item === -->
+                <div class="row row-block">
+                    <div class="col-md-5 history-image" style="background-image:url({% static 'images/blog-5.jpg' %})">
+                        <div class="history-title">
+                            <h2 class="title">1940</h2>
+                            <p>Furniture color palette</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 history-desc">
+                        <div class="h5 title">There are designers out there</div>
+                        <p>
+                            Bust master shore what the sainted store tell stood sitting word thy
+                            unbrokenquit tossed more beguiling to rare stood take.
+                            Sent that maiden entrance door the and i to if me entrance the startled
+                            yore the sainted velvet raven still bird cushioned more then quoth and just a lenore back
+                        </p>
+                        <p>
+                            Leave till the and let nameless lenore the followed or shorn wide mystery quoth agreeing
+                            the lore myself soul its nevermore lenore mortals this the still plainly thereat on thinking
+                            the door above a have of hesitating longer i and that as mefilled now lord marvelled me i of be.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- === row item === -->
+                <div class="row row-block">
+                    <div class="col-md-5 history-image" style="background-image:url({% static 'images/blog-6.jpg' %})">
+                        <div class="history-title">
+                            <h2 class="title">1950</h2>
+                            <p>Employer of the year</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 history-desc">
+                        <div class="h5 title">We love our employees</div>
+                        <p>
+                            Bust master shore what the sainted store tell stood sitting word thy
+                            unbrokenquit tossed more beguiling to rare stood take.
+                            Sent that maiden entrance door the and i to if me entrance the startled
+                            yore the sainted velvet raven still bird cushioned more then quoth and just a lenore back
+                        </p>
+                        <p>
+                            Leave till the and let nameless lenore the followed or shorn wide mystery quoth agreeing
+                            the lore myself soul its nevermore lenore mortals this the still plainly thereat on thinking
+                            the door above a have of hesitating longer i and that as mefilled now lord marvelled me i of be.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================  Banner ======================== -->
+
+        <section class="banner" style="background-image:url({% static 'images/gallery-2.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 text-center">
+                        <h2 class="title">Our story</h2>
+                        <p>Наша проффесиональная команда работает на рынке с 2002 года и нацелена на большой результат.Мебель,которую мы выпускаем делиться уютом у каждого нашего клиента</p>
+                        <p>Наша проффесиональная команда работает на рынке с 2002 года и нацелена на большой результат.Мебель,которую мы выпускаем делиться уютом у каждого нашего клиента</p>
+                        <p><a href="#" class="btn btn-clean">Read full story</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================  Blog Dark ======================== -->
+
+        <section class="blog blog-block">
+
+            <div class="container">
+
+                <!-- === blog header === -->
+
+                <header>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h2 class="title">Interior ideas</h2>
+                            <div class="text">
+                                <p>Keeping things minimal</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row">
+
+                    <!-- === blog item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="../../../blog/templates/blog/article.html">
+                                <div class="image">
+                                    <img src="{% static 'images/project-1.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">28 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h3">Creating the Perfect Gallery Wall </h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home, moved into your very own apartment, moved out of the dorm room or you’re finally downsizing after all of your kids have left the nest.</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="../../../blog/templates/blog/article.html">
+                                <div class="image">
+                                    <img src="{% static 'images/project-2.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">25 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h3">Making the Most Out of Your Kids Old Bedroom</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home, moved into your very own apartment, moved out of the dorm room or you’re finally downsizing after all of your kids have left the nest.</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="../../../blog/templates/blog/article.html">
+                                <div class="image">
+                                    <img src="{% static 'images/project-3.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">28 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h3">Have a look at our new projects!</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home, moved into your very own apartment, moved out of the dorm room or you’re finally downsizing after all of your kids have left the nest.</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                </div>
+                <!--/row-->
+                <!--button more-->
+                <div class="wrapper-more">
+                    <a href="../../../blog/templates/blog/ideas.html" class="btn btn-main">View all posts</a>
+                </div>
+
+            </div>
+            <!--/container-->
+        </section>
+
+
+        <!-- ======================== Quotes ======================== -->
+
+        <section class="quotes quotes-slider" style="background-image:url({% static 'images/gallery-2.jpg' %})">
+            <div class="container">
+                <div class="row">
+
+                    <div class="quote-carousel">
+
+                        <!-- === quoute item === -->
+                        {% for r in reviews %}
+                        <div class="quote">
+                            <div class="image">
+                                <img src="{{ r.img.url }}" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>{{ r.name }}</h4>
+                                <p>{{ r.description}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div> <!--/quote-carousel-->
+                </div> <!--/row-->
+            </div> <!--/container-->
+        </section>
+
+        <!-- ================== Footer  ================== -->
+        {% include 'footer.html' %} 
+
+    </div> <!--/wrapper-->
+
+
+
+</body>
+</html>
+{% endblock %}

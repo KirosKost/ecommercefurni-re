@@ -1,0 +1,55 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Ошибка!{% endblock %}
+{% block content %}
+<div class="page-loader"></div>
+<div class="wrapper">
+
+    <!--Use class "navbar-fixed" or "navbar-default" -->
+    <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+    <!-- ======================== Navigation ======================== -->
+
+
+
+    <!-- ==========  Top navigation ========== -->
+
+    {% include 'header.html' %}
+    <!-- ========================  Main header ======================== -->
+
+    <section class="main-header" style="background-image:url({% static 'images/gallery-2.jpg' %})">
+        <header>
+            <div class="container text-center">
+            </div>
+        </header>
+    </section>
+
+    <!-- ========================  Checkout ======================== -->
+
+    <section class="checkout">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center">
+                    <h2 class="title">Ой, что-то пошло не так!</h2>
+                    <div class="text">
+                        <p>Вернитесь на шаг назад и проверьте правильность вводимых данных</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper-more">
+                <a href="/cart/order" class="btn btn-main">Назад</a>
+            </div>
+
+        </div> <!--/container-->
+
+    </section>
+
+
+    <!-- ================== Footer  ================== -->
+
+    {% include 'footer.html' %} 
+
+</div> <!--/wrapper-->
+{% endblock %}

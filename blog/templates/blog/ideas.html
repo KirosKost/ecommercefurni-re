@@ -1,0 +1,275 @@
+﻿{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Дизайнер интерьера{% endblock %}
+{% block content %}
+<body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+        <!--Use class "navbar-fixed" or "navbar-default" -->
+        <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+        <!-- ======================== Navigation ======================== -->
+
+        {% include 'header.html' %}
+
+        <!-- ========================  Main header ======================== -->
+
+        <section class="main-header" style="background-image:url({% static 'images/gallery-3.jpg' %})">
+            <header>
+                <div class="container">
+                    <h1 class="h2 title">Дизайнер интерьера</h1>
+                    <ol class="breadcrumb breadcrumb-inverted">
+                        <li><a href="{% url 'home' %}"><span class="icon icon-home"></span></a></li>
+                        <li><a href="{% url 'design' %}">Дизайнер интерьера</a></li>
+                        <li><a class="active" href="{% url 'design' %}">Дизайнер-интерьера</a></li>
+                    </ol>
+                </div>
+            </header>
+        </section>
+
+        <!-- ========================  Blog ======================== -->
+
+        <section class="blog blog-block">
+
+            <div class="container">
+
+                <div class="pre-header">
+                    <div>
+                        <h2 class="h3 title">
+                            Дизайнер интерьера <br />
+                            <small class="text-capitalize">Подходит для тех случаев, когда вам нужна помощь в оформлении интерьера</small>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- === blog-item === -->
+                    {% for p in posts %}
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="{% url 'post_detail' p.pk %}">
+                                <div class="image">
+                                    {% if p.photo %}
+                                    <p><img src="{{ p.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% endif %}
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">{{ p.date }}</div>
+                                    <div class="title">
+                                        <h2 class="h3">{{ p.title }}</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>{{ p.body }}</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span href="{% url 'post_detail' p.pk %}" class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div> <!--/row-->
+
+            </div><!--/container-->
+        </section>
+
+        <!-- ========================  Banner ======================== -->
+
+        <section class="banner" style="background-image:url({% static 'images/gallery-4.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <h2 class="title">Our story</h2>
+                        <p>
+                            We believe in creativity as one of the major forces of progress. With this idea, we traveled throughout
+                            Italy to find exceptional artisans and bring their unique handcrafted objects to connoisseurs
+                            everywhere.
+                        </p>
+                        <p><a href="#" class="btn btn-clean">Read full story</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================  Blog ======================== -->
+
+        <section class="blog blog-block">
+
+            <div class="container">
+
+                <div class="pre-header">
+                    <div>
+                        <h2 class="h3 title">
+                            <a href="#" class="btn btn-sm btn-main text-capitalize pull-right"><span class="icon icon-bookmark"></span> Saved stories</a>
+                            Creating the Perfect Gallery Wall  <br />
+                            <small class="text-capitalize">Your color palette can come from a variety of inspiration</small>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-3.jpg' %})">
+                                    <img src="{% static 'images/blog-3.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">08 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">Falling into the new Season </h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-4.jpg' %})">
+                                    <img src="{% static 'images/blog-4.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">03 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">Creating the Perfect Gallery Wall </h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-8.jpg' %})">
+                                    <img src="{% static 'images/blog-8.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">01 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">Making the Most Out of Your Kids Old Bedroom</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-6.jpg' %})">
+                                    <img src="{% static 'images/blog-6.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">08 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">4 Products to Warm Up Your Winter</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-8.jpg' %})">
+                                    <img src="{% static 'images/blog-6.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">03 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">Making the Most Out of Your Kids Old Bedroom</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <!-- === blog-item === -->
+
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="article.html">
+                                <div class="image" style="background-image:url({% static 'images/blog-8.jpg' %})">
+                                    <img src="{% static 'images/blog-8.jpg' %}" alt="" />
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">01 Mart 2017</div>
+                                    <div class="title">
+                                        <h2 class="h5">What does your favorite dining chair say about you?</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>You’ve finally reached this point in your life- you’ve bought your first home...</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================== Footer  ================== -->
+
+        {% include 'footer.html' %}
+
+
+
+</body>
+</html>
+{% endblock %}

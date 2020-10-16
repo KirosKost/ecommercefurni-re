@@ -1,0 +1,949 @@
+﻿{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<body>
+
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+        <!--Use class "navbar-fixed" or "navbar-default" -->
+        <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+        <!-- ======================== Navigation ======================== -->
+
+        {% include 'header.html' %}
+
+        <!-- ========================  Header content ======================== -->
+
+        <section class="header-content">
+
+            <div class="owl-slider">
+
+                <!-- === slide item === -->
+
+                <div class="item" style="background-image:url({% static 'images/gallery-2.jpg' %})">
+                    <div class="box">
+                        <div class="container">
+                            <h2 class="title animated h1" data-animation="fadeInDown">Модная и современная мебель</h2>
+                            <div class="animated" data-animation="fadeInUp">
+                                Мебель европейского качества<br /> Широкий ассортимент и ценовой диапазон.
+                            </div>
+                            <div class="animated" data-animation="fadeInUp">
+                                <a href="{% url 'about' %}" target="_blank" class="btn btn-main" ></i> О нас</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === slide item === -->
+
+                <div class="item" style="background-image:url({% static 'images/gallery-3.jpg' %})">
+                    <div class="box">
+                        <div class="container">
+                            <h2 class="title animated h1" data-animation="fadeInDown">Готовые комплекты!</h2>
+                            <div class="animated" data-animation="fadeInUp">Позволяют полностью обустроить дом или офис</div>
+                            <div class="animated" data-animation="fadeInUp">Бесплатная консультация по люым вопросам</div>
+                            <div class="animated" data-animation="fadeInUp">
+                                <a href="{% url 'shop' %}" class="btn btn-clean">Товары</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === slide item === -->
+
+                <div class="item" style="background-image:url({% static 'images/gallery-1.jpg' %})">
+                    <div class="box">
+                        <div class="container">
+                            <h2 class="title animated h1" data-animation="fadeInDown">
+                                Современный дизайн
+                            </h2>
+                            <div class="desc animated" data-animation="fadeInUp">
+                                Можете подобрать мебель по вашему вкусу.
+                            </div>
+                            <div class="desc animated" data-animation="fadeInUp">
+                                Так же имеется встраиваемая мебель
+                            </div>
+                            <div class="animated" data-animation="fadeInUp">
+                                <a href="{% url 'contact' %}" target="_blank" class="btn btn-clean">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!--/owl-slider-->
+        </section>
+
+        <!-- ========================  Icons slider ======================== -->
+
+        <section class="owl-icons-wrapper owl-icons-frontpage">
+
+            <!-- === header === -->
+
+            <header class="hidden">
+                <h2>Product categories</h2>
+            </header>
+
+            <div class="container">
+
+                <div class="owl-icons">
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-sofa"></i>
+                            <figcaption>Диваны</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-armchair"></i>
+                            <figcaption>Кресла</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-chair"></i>
+                            <figcaption>Стулья</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-dining-table"></i>
+                            <figcaption>Гостинные столы</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-media-cabinet"></i>-->
+<!--                            <figcaption>Media storage</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-table"></i>
+                            <figcaption>Столы</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-bookcase"></i>-->
+<!--                            <figcaption>Bookcase</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-bedroom"></i>-->
+<!--                            <figcaption>Bedroom</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-nightstand"></i>-->
+<!--                            <figcaption>Nightstand</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-children-room"></i>-->
+<!--                            <figcaption>Children room</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-kitchen"></i>-->
+<!--                            <figcaption>Kitchen</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-bathroom"></i>-->
+<!--                            <figcaption>Bathroom</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-wardrobe"></i>-->
+<!--                            <figcaption>Wardrobe</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-shoe-cabinet"></i>-->
+<!--                            <figcaption>Shoe cabinet</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-office"></i>
+                            <figcaption>Журнальные столики</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-bar-set"></i>-->
+<!--                            <figcaption>Bar sets</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-lightning"></i>-->
+<!--                            <figcaption>Lightning</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                    <!-- === icon item === -->
+
+                    <a href="{% url 'shop' %}">
+                        <figure>
+                            <i class="f-icon f-icon-carpet"></i>
+                            <figcaption>Этно мебель</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+
+<!--                    <a href="#">-->
+<!--                        <figure>-->
+<!--                            <i class="f-icon f-icon-accessories"></i>-->
+<!--                            <figcaption>Accessories</figcaption>-->
+<!--                        </figure>-->
+<!--                    </a>-->
+
+                </div> <!--/owl-icons-->
+            </div> <!--/container-->
+        </section>
+
+        <!-- ========================  Products widget ======================== -->
+
+        <section class="products">
+
+            <div class="container">
+
+                <!-- === header title === -->
+
+                <header>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h2 class="title">Популярные продукты</h2>
+                            <div class="text">
+                                <p>Посмотрите список товаров, которые пользуются популярностью</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row">
+
+                    <!-- === product-item === -->
+
+                    {% for p in products %}
+                    <div class="col-md-4 col-xs-6">
+
+                        <article>
+                            <div class="figure-grid">
+                                {% if p.new == True %}
+                                <span class="label label-warning">New</span>
+                                {% endif %}
+                                {% if p.discount %}
+                                <span class="label label-info">-{{ p.discount }}%</span>
+                                {% endif %}
+                                <div class="image">
+                                    <a href="#productid{{ p.pk }}" class="mfp-open">
+                                        {% if p.img1 %}
+                                        <img src="{{ p.img1.url }}" alt="" width="360" />
+                                        {% else %}
+                                        <img src="{% static 'images/product-1.png' %}" alt="" width="360" />
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="text">
+                                    <h2 class="title h4"><a href="product.html">{{ p.name }}</a></h2>
+                                    {% if p.price_discount %}
+                                    <sub>{{ p.price }} Сом</sub>
+                                    <sup>{{ p.price_discount }} Сом</sup>
+                                    {% else %}
+                                    <sup>{{ p.price }} Сом</sup>
+                                    {% endif %}
+                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata consetetur facilisis blandit et aliquyam lorem ea duo labore diam sit et consetetur nulla</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+
+                </div> <!--/row-->
+                <!-- === button more === -->
+
+                <div class="wrapper-more">
+                    <a href="/shop" class="btn btn-main">В магазин</a>
+                </div>
+
+                <!-- ========================  Product info popup - quick view ======================== -->
+
+                {% for p in products %}
+                <div class="popup-main mfp-hide" id="productid{{ p.pk }}">
+                    <form action="{% url 'cart:cart_add' p.id %}" method="POST">
+
+                    <!-- === product popup === -->
+
+                    <div class="product">
+
+                        <!-- === popup-title === -->
+
+                        <div class="popup-title">
+                            <div class="h1 title">{{ p.name }} <small>{{ p.category }}</small></div>
+                        </div>
+
+                        <!-- === product gallery === -->
+
+                        <div class="owl-product-gallery">
+                            {% if p.img1 %}
+                            <img src="{{ p.img1.url }}" alt="" width="640" />
+                            {% else %}
+                            <img src="{% static 'images/product-1.png' %}" alt="" width="640" />
+                            {% endif %}
+                            {% if p.img2 %}
+                            <img src="{{ p.img2.url }}" alt="" width="640" />
+                            {% endif %}
+                            {% if p.img3 %}
+                            <img src="{{ p.img3.url }}" alt="" width="640" />
+                            {% endif %}
+                            {% if p.img4 %}
+                            <img src="{{ p.img4.url }}" alt="" width="640" />
+                            {% endif %}
+                            {% if p.img5 %}
+                            <img src="{{ p.img5.url }}" alt="" width="640" />
+                            {% endif %}
+                        </div>
+
+                        <!-- === product-popup-info === -->
+
+                        <div class="popup-content">
+                            <div class="product-info-wrapper">
+                                <div class="row">
+
+                                    <!-- === left-column === -->
+
+                                    <div class="col-sm-6">
+                                        <div class="info-box">
+                                            <strong>Бренд:</strong>
+                                            <span> {{ p.brand }}</span>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Материал:</strong>
+                                            <span> {% for mats in p.materials.all %}{{ mats.name }}, {% endfor %}</span>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Наличие:</strong>
+                                            {% if p.availability == True %}
+                                            <span><i class="fa fa-check-square-o"></i> В наличии</span>
+                                            {% else %}
+                                            <span><i class="fa fa-square-o"></i> Нет в наличии</span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+                                    <!-- === right-column === -->
+
+                                    <div class="col-sm-6">
+                                        <div class="info-box">
+                                            <strong>Доступные цвета</strong>
+                                            <div class="product-colors clearfix">
+                                                {% for cols in p.colors.all %}
+                                                <input type="radio" name="colors" class="color-btn" id="id_colors"
+                                                   style="background-color: {{cols.color}}" value="{{ cols.name }}">
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Доступные размеры</strong>
+                                            <div class="product-colors clearfix">
+                                                {% for s in p.sizes.all %}
+                                            <input type="radio" name="sizes" id="size_{{s.name}}"
+                                                   class="color-btn color-btn-biege" style="display: none" value="{{ s.name }}">
+                                            <label for="size_{{s.name}}"
+                                                   class="color-btn color-btn-biege">{{s.name}}</label>
+                                            {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> <!--/row-->
+                            </div> <!--/product-info-wrapper-->
+                        </div> <!--/popup-content-->
+                        <!-- === product-popup-footer === -->
+                        {% csrf_token %}
+                        <input type="hidden" name="quantity" value="1" id="id_quantity">
+                        <input type="hidden" name="update" value="False" id="id_update">
+                        <div class="popup-table">
+                            <div class="popup-cell">
+                                <div class="price">
+                                    {% if p.price_discount %}
+                                    <span class="h3">$ {{p.price_discount}} <small>$ {{p.price}}</small></span>
+                                    {% else %}
+                                    <span class="h3">$ {{ p.price }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="popup-cell">
+                                <div class="popup-buttons">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!--/product-->
+                    </form>
+                </div>
+                {% endfor %}
+
+                <div class="popup-main mfp-hide" id="productid19999">
+
+                    <!-- === product popup === -->
+
+                    <div class="product">
+
+                        <!-- === popup-title === -->
+
+                        <div class="popup-title">
+                            <div class="h1 title">Laura <small>product category</small></div>
+                        </div>
+
+                        <!-- === product gallery === -->
+
+                        <div class="owl-product-gallery">
+                            <img src="{% static 'images/product-1.png' %}" alt="" width="640" />
+                            <img src="{% static 'images/product-2.png' %}" alt="" width="640" />
+                            <img src="{% static 'images/product-3.png' %}" alt="" width="640" />
+                            <img src="{% static 'images/product-4.png' %}" alt="" width="640" />
+                        </div>
+
+                        <!-- === product-popup-info === -->
+
+                        <div class="popup-content">
+                            <div class="product-info-wrapper">
+                                <div class="row">
+
+                                    <!-- === left-column === -->
+
+                                    <div class="col-sm-6">
+                                        <div class="info-box">
+                                            <strong>Maifacturer</strong>
+                                            <span>Brand name</span>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Materials</strong>
+                                            <span>Wood, Leather, Acrylic</span>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Availability</strong>
+                                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- === right-column === -->
+
+                                    <div class="col-sm-6">
+                                        <div class="info-box">
+                                            <strong>Available Colors</strong>
+                                            <div class="product-colors clearfix">
+                                                <span class="color-btn color-btn-red"></span>
+                                                <span class="color-btn color-btn-blue checked"></span>
+                                                <span class="color-btn color-btn-green"></span>
+                                                <span class="color-btn color-btn-gray"></span>
+                                                <span class="color-btn color-btn-biege"></span>
+                                            </div>
+                                        </div>
+                                        <div class="info-box">
+                                            <strong>Choose size</strong>
+                                            <div class="product-colors clearfix">
+                                                <span class="color-btn color-btn-biege">S</span>
+                                                <span class="color-btn color-btn-biege checked">M</span>
+                                                <span class="color-btn color-btn-biege">XL</span>
+                                                <span class="color-btn color-btn-biege">XXL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> <!--/row-->
+                            </div> <!--/product-info-wrapper-->
+                        </div> <!--/popup-content-->
+                        <!-- === product-popup-footer === -->
+
+                        <div class="popup-table">
+                            <div class="popup-cell">
+                                <div class="price">
+                                    <span class="h3">$ 1999,00 <small>$ 2999,00</small></span>
+                                </div>
+                            </div>
+                            <div class="popup-cell">
+                                <div class="popup-buttons">
+                                    <a href="product.html"><span class="icon icon-eye"></span> <span class="hidden-xs">View more</span></a>
+                                    <a href="javascript:void(0);"><span class="icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!--/product-->
+                </div> <!--popup-main-->
+            </div> <!--/container-->
+        </section>
+
+        <!-- ========================  Stretcher widget ======================== -->
+
+        <section class="stretcher-wrapper">
+
+            <!-- === stretcher header === -->
+
+            <header class="hidden">
+                <!--remove class 'hidden'' to show section header -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h1 class="h2 title">Popular categories</h1>
+                            <div class="text">
+                                <p>
+                                    Whether you are changing your home, or moving into a new one, you will find a huge selection of quality living room furniture,
+                                    bedroom furniture, dining room furniture and the best value at Furniture factory
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- === stretcher === -->
+
+            <ul class="stretcher">
+
+                <!-- === stretcher item === -->
+
+                <li class="stretcher-item" style="background-image:url({% static 'images/gallery-3.jpg' %});">
+                    <!--logo-item-->
+                    <div class="stretcher-logo">
+                        <div class="text">
+                            <span class="f-icon f-icon-sofa"></span>
+                            <span class="text-intro">Диваны</span>
+                        </div>
+                    </div>
+                    <!--main text-->
+                    <figure>
+                        <h4>Модные и современные диваны</h4>
+                        <figcaption>Идеально для гостиной</figcaption>
+                    </figure>
+                    <!--anchor-->
+                    <a href="/shop/sofa">Anchor link</a>
+                </li>
+
+                <!-- === stretcher item === -->
+
+                <li class="stretcher-item" style="background-image:url({% static 'images/gallery-2.jpg' %});">
+                    <!--logo-item-->
+                    <div class="stretcher-logo">
+                        <div class="text">
+                            <span class="f-icon f-icon-armchair"></span>
+                            <span class="text-intro">Кресла</span>
+                        </div>
+                    </div>
+                    <!--main text-->
+                    <figure>
+                        <h4>Удобные и мягкие кресла</h4>
+                        <figcaption>Разные размеры и огромный ассортимент</figcaption>
+                    </figure>
+                    <!--anchor-->
+                    <a href="/shop/armchair">Ссылка</a>
+                </li>
+
+                <!-- === stretcher item === -->
+
+                <li class="stretcher-item" style="background-image:url({% static 'images/gallery-1.jpg' %});">
+                    <!--logo-item-->
+                    <div class="stretcher-logo">
+                        <div class="text">
+                            <span class="f-icon f-icon-chair"></span>
+                            <span class="text-intro">Стулья</span>
+                        </div>
+                    </div>
+                    <!--main text-->
+                    <figure>
+                        <h4>Стуля из разных материалов</h4>
+                        <figcaption>Подойдут для дома, офиса, улиц и прочих условий</figcaption>
+                    </figure>
+                    <!--anchor-->
+                    <a href="/shop/chair">Anchor link</a>
+                </li>
+
+                <!-- === stretcher item === -->
+
+                <li class="stretcher-item" style="background-image:url('{% static 'images/gallery-3.jpg' %}');">
+                    <!--logo-item-->
+                    <div class="stretcher-logo">
+                        <div class="text">
+                            <span class="f-icon f-icon-dining-table"></span>
+                            <span class="text-intro">Гостинные столы</span>
+                        </div>
+                    </div>
+                    <!--main text-->
+                    <figure>
+                        <h4>Гостинные столы различных размеров</h4>
+                        <figcaption>Подойдут для маленьких и больших компаний</figcaption>
+                    </figure>
+                    <!--anchor-->
+                    <a href="/shop/dining-table">Anchor link</a>
+                </li>
+
+                <!-- === stretcher item more=== -->
+
+                <li class="stretcher-item more">
+                    <div class="more-icon">
+                        <span data-title-show="Посмотреть больше" data-title-hide="+"></span>
+                    </div>
+                    <a href="/shop"></a>
+                </li>
+                <!-- === stretcher item === -->
+
+<!--                <li class="stretcher-item" style="background-image:url('{% static 'images/gallery-3.jpg' %}');">-->
+<!--                    &lt;!&ndash;logo-item&ndash;&gt;-->
+<!--                    <div class="stretcher-logo">-->
+<!--                        <div class="text">-->
+<!--                            <span class="f-icon f-icon-table"></span>-->
+<!--                            <span class="text-intro">Cтолы</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;main text&ndash;&gt;-->
+<!--                    <figure>-->
+<!--                        <h4>Keeping Things Minimal</h4>-->
+<!--                        <figcaption>Creating Your Very Own Bathroom</figcaption>-->
+<!--                    </figure>-->
+<!--                    &lt;!&ndash;anchor&ndash;&gt;-->
+<!--                    <a href="{% url 'shop' %}">Anchor link</a>-->
+<!--                </li>-->
+<!--                &lt;!&ndash; === stretcher item === &ndash;&gt;-->
+
+<!--                <li class="stretcher-item" style="background-image:url('{% static 'images/gallery-3.jpg' %}');">-->
+<!--                    &lt;!&ndash;logo-item&ndash;&gt;-->
+<!--                    <div class="stretcher-logo">-->
+<!--                        <div class="text">-->
+<!--                            <span class="f-icon f-icon-office"></span>-->
+<!--                            <span class="text-intro">Журнальные столики</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;main text&ndash;&gt;-->
+<!--                    <figure>-->
+<!--                        <h4>Keeping Things Minimal</h4>-->
+<!--                        <figcaption>Creating Your Very Own Bathroom</figcaption>-->
+<!--                    </figure>-->
+<!--                    &lt;!&ndash;anchor&ndash;&gt;-->
+<!--                    <a href="{% url 'shop' %}">Anchor link</a>-->
+<!--                </li> <li class="stretcher-item" style="background-image:url('{% static 'images/gallery-3.jpg' %}');">-->
+<!--                    &lt;!&ndash;logo-item&ndash;&gt;-->
+<!--                    <div class="stretcher-logo">-->
+<!--                        <div class="text">-->
+<!--                            <span class="f-icon f-icon-carpet"></span>-->
+<!--                            <span class="text-intro">Этно-мебель</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;main text&ndash;&gt;-->
+<!--                    <figure>-->
+<!--                        <h4>Keeping Things Minimal</h4>-->
+<!--                        <figcaption>Creating Your Very Own Bathroom</figcaption>-->
+<!--                    </figure>-->
+<!--                    &lt;!&ndash;anchor&ndash;&gt;-->
+<!--                    <a href="{% url 'shop' %}">Anchor link</a>-->
+<!--                </li>-->
+
+            </ul>
+        </section>
+
+        <!-- ========================  Blog Block ======================== -->
+
+        <section class="blog blog-block">
+
+            <div class="container">
+
+                <!-- === blog header === -->
+
+                <header>
+                    <div class="row"><header>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h1 class="h2 title">Блог</h1>
+                            <div class="text">
+                                <p>Посмотрите статьи, которые помогут вам в выборе мебели</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                    <!-- === blog-item === -->
+                    {% for p in posts %}
+                    <div class="col-sm-4">
+                        <article>
+                            <a href="{% url 'post_detail' p.pk %}">
+                                <div class="image">
+                                    {% if p.photo %}
+                                    <p><img src="{{ p.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% endif %}
+                                </div>
+                                <div class="entry entry-block">
+                                    <div class="date">{{ p.date }}</div>
+                                    <div class="title">
+                                        <h2 class="h3">{{ p.title }}</h2>
+                                    </div>
+                                    <div class="description">
+                                        <p>{{ p.body }}</p>
+                                    </div>
+                                </div>
+                                <div class="show-more">
+                                    <span href="{% url 'post_detail' p.pk %}" class="btn btn-main btn-block">Read more</span>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div> <!--/row-->
+                <!-- === button more === -->
+
+                <div class="wrapper-more">
+                    <a href="/blog" class="btn btn-main">Перейти в блог</a>
+                </div>
+
+            </div> <!--/container-->
+        </section>
+
+        <!-- ========================  Banner ======================== -->
+
+        <section class="banner" style="background-image:url({% static 'images/gallery-2.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <h2 class="title">О нас</h2>
+                        <p>
+                            Мы верим в то, что помогаем людям наслаждаться их устройством дома. Можете оставить заявку, дальше наши специалисты все сделают для вас. Если вы не уверены в своем выборе или сомневаетесь, что сможете сделать красивую композицию для вас - наши дизайнеры интерьера помогут вам.
+                        </p>
+                        <p><a href="{% url 'about' %}" class="btn btn-clean">О компании</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================  Blog ======================== -->
+
+<!--        <section class="blog">-->
+
+<!--            <div class="container">-->
+
+<!--                &lt;!&ndash; === blog header === &ndash;&gt;-->
+
+<!--                <header>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-offset-2 col-md-8 text-center">-->
+<!--                            <h1 class="h2 title">Blog</h1>-->
+<!--                            <div class="text">-->
+<!--                                <p>Latest news from the blog</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </header>-->
+
+<!--                <div class="row">-->
+
+<!--                    &lt;!&ndash; === blog item === &ndash;&gt;-->
+
+<!--                    <div class="col-sm-4">-->
+<!--                        <article>-->
+<!--                            <a href="article.html">-->
+<!--                                <div class="image" style="background-image:url({% static 'images/design/project-1.jpg' %})">-->
+<!--                                    <img src="{% static 'images/blog-1.jpg' %}" alt="" />-->
+<!--                                </div>-->
+<!--                                <div class="entry entry-table">-->
+<!--                                    <div class="date-wrapper">-->
+<!--                                        <div class="date">-->
+<!--                                            <span>MAR</span>-->
+<!--                                            <strong>08</strong>-->
+<!--                                            <span>2017</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="title">-->
+<!--                                        <h2 class="h5">The 3 Tricks that Quickly Became Rules</h2>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="show-more">-->
+<!--                                    <span class="btn btn-main btn-block">Read more</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </article>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash; === blog item === &ndash;&gt;-->
+
+<!--                    <div class="col-sm-4">-->
+<!--                        <article>-->
+<!--                            <a href="article.html">-->
+<!--                                <div class="image" style="background-image:url({% static 'images/design/project-2.jpg' %})">-->
+<!--                                    <img src="{% static 'images/blog-1.jpg' %}" alt="" />-->
+<!--                                </div>-->
+<!--                                <div class="entry entry-table">-->
+<!--                                    <div class="date-wrapper">-->
+<!--                                        <div class="date">-->
+<!--                                            <span>MAR</span>-->
+<!--                                            <strong>03</strong>-->
+<!--                                            <span>2017</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="title">-->
+<!--                                        <h2 class="h5">Decorating When You're Starting Out or Starting Over</h2>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="show-more">-->
+<!--                                    <span class="btn btn-main btn-block">Read more</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </article>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash; === blog item === &ndash;&gt;-->
+
+<!--                    <div class="col-sm-4">-->
+<!--                        <article>-->
+<!--                            <a href="article.html">-->
+<!--                                <div class="image" style="background-image:url({% static 'images/design/project-3.jpg' %})">-->
+<!--                                    <img src="{% static 'images/blog-8.jpg' %}" alt="" />-->
+<!--                                </div>-->
+<!--                                <div class="entry entry-table">-->
+<!--                                    <div class="date-wrapper">-->
+<!--                                        <div class="date">-->
+<!--                                            <span>MAR</span>-->
+<!--                                            <strong>01</strong>-->
+<!--                                            <span>2017</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="title">-->
+<!--                                        <h2 class="h5">What does your favorite dining chair say about you?</h2>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="show-more">-->
+<!--                                    <span class="btn btn-main btn-block">Read more</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </article>-->
+<!--                    </div>-->
+
+<!--                </div> &lt;!&ndash;/row&ndash;&gt;-->
+<!--                &lt;!&ndash; === button more === &ndash;&gt;-->
+
+<!--                <div class="wrapper-more">-->
+<!--                    <a href="blog-grid.html" class="btn btn-main">View all posts</a>-->
+<!--                </div>-->
+
+<!--            </div> &lt;!&ndash;/container&ndash;&gt;-->
+<!--        </section>-->
+
+        <!-- ========================  Instagram ======================== -->
+
+        <section class="instagram">
+
+            <!-- === instagram header === -->
+
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8 text-center">
+                            <h2 class="h2 title">Подписывайтесь на <i class="fa fa-instagram fa-2x"></i> Instagram </h2>
+                            <div class="text">
+                                <p>@InstaFurnitureFactory</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- === instagram gallery === -->
+
+            <div class="gallery clearfix">
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-1.jpg' %}" alt="Alternate Text" />
+                </a>
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-2.jpg' %}" alt="Alternate Text" />
+                </a>
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-3.jpg' %}" alt="Alternate Text" />
+                </a>
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-4.jpg' %}" alt="Alternate Text" />
+                </a>
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-5.jpg' %}" alt="Alternate Text" />
+                </a>
+                <a class="item" href="#">
+                    <img src="{% static 'images/square-6.jpg' %}" alt="Alternate Text" />
+                </a>
+
+            </div> <!--/gallery-->
+
+        </section>
+
+        <!-- ================== Footer  ================== -->
+
+        {% include 'footer.html' %}
+
+    </div> <!--/wrapper-->
+</body>
+
+</html>
+{% endblock %}

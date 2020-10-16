@@ -1,0 +1,191 @@
+﻿{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}Одиночный блог{% endblock %}
+{% block content %}
+<body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+        <!--Use class "navbar-fixed" or "navbar-default" -->
+        <!--If you use "navbar-fixed" it will be sticky menu on scroll (only for large screens)-->
+
+        <!-- ======================== Navigation ======================== -->
+        {% include 'header.html' %}
+        <!-- ========================  Main header ======================== -->
+
+        <section class="main-header main-header-blog" style="background-image:url({% static 'images/gallery-1.jpg)' %}">
+            <header>
+                <div class="container text-center">
+                    <h2 class="h2 title">Blog</h2>
+                    <ol class="breadcrumb breadcrumb-inverted">
+                        <li><a href="../../../mebel/templates/mebel/index.html"><span class="icon icon-home"></span></a></li>
+                        <li><a href="../../../mebel/templates/mebel/blog-grid.html">Blog Category</a></li>
+                        <li><a class="active" href="article.html">Decorating When You're...</a></li>
+                    </ol>
+                </div>
+            </header>
+        </section>
+
+        <!-- ========================  Blog article ======================== -->
+
+        <section class="blog">
+
+            <!-- === blog navigation === -->
+
+            <div class="blog-navigation">
+                <!-- === nav previous === -->
+
+                <a class="nav-link prev" href="#">
+                    <figure>
+                        <div class="image">
+                            <img src="assets/images/blog-2.jpg" alt="Alternate Text">
+                        </div>
+                        <figcaption>
+                            <div class="blog-title h6">The 3 Tricks that Quickly Became Rules</div>
+                        </figcaption>
+                    </figure>
+                </a>
+
+                <!-- === nav next === -->
+
+                <a class="nav-link next" href="#">
+                    <figure>
+                        <div class="image">
+                            <img src="{% static 'images/blog-3.jpg' %}" alt="Alternate Text">
+                        </div>
+                        <figcaption>
+                            <div class="blog-title h6">What does your favorite dining chair say about you?</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div> <!--/blog-navigation-->
+            <!-- ========================  Blog post ======================== -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+
+
+                        <div class="blog-post">
+
+                            <!-- === blog main image & entry info === -->
+
+                            <div class="blog-image-main">
+                                {% if post.photo %}
+                                    <p><img src="{{ post.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                {% endif %}
+                            </div>
+
+                            <div class="blog-post-content">
+
+                                <!-- === blog post title === -->
+
+                                <div class="blog-post-title">
+                                    <h1 class="blog-title">{{ post.title }}</h1>
+                                    <div class="blog-info blog-info-top">
+                                        <div class="entry">
+                                            <i class="fa fa-calendar"></i>
+                                            <span>{{ post.date }}</span>
+                                        </div>
+                                    </div> <!--/blog-info-->
+                                </div>
+
+                                <!-- === blog post text === -->
+
+                                <div class="blog-post-text">
+
+                                    <h4>{{ post.title }}</h4>
+                                    <p>{{ post.body }}</p>
+                                    {% if post.photo %}
+                                    <p><img src="{{ post.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% endif %}
+                                    <p>
+                                        If you’re the kind of person who needs to see it all in person then head over to your closest
+                                        Mor Furniture for Less and check out the way we lay out rooms. We strategically put together
+                                        rooms for you with full sets of furniture. This way you don’t have to imagine what a
+                                        finished room will look like.
+                                    </p>
+                                    <h4>Sketch out your floor plan</h4>
+                                    <p>
+                                        Now that you’re the one calling all of the shots you can layout the room just the way you
+                                        like it. Take the time to sketch it out, come up with a few ideas and keep the extras
+                                        in your back pocket so you can give the room a refresh in a few months. If you’re the
+                                        kind of person who needs to physically see how things layout then put those moving boxes
+                                        to good use and place them around the room as furniture.
+                                    </p>
+                                    <p>
+                                    {% if post.photo %}
+                                    <p><img src="{{ post.photo.url }}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% else %}
+                                    <p><img src="{% static 'images/404.jpg' %}" alt="This is an alternative image description. It will generate auto caption." /></p>
+                                    {% endif %}
+                                    </p>
+                                    <p>
+                                        If moving boxes sounds like too much work and your artist skills aren’t exactly up to par
+                                        there are many different room builders and planners online. All you do is upload an image
+                                        of the room and start planning!
+                                    </p>
+                                    <h4>Choose your color palette</h4>
+                                    <p>
+                                        Your color palette can come from a variety of inspiration. There are designers out there
+                                        who say to take that inspiration from your floor color, others say to use a piece of
+                                        art, but one of the best ways to create the perfect space for you is to use an item that
+                                        you truly love. It could be anything from a favorite outfit you wear to a rug. Once your
+                                        color palette is chosen work backward adding in neutrals to break up the bolder colors.
+                                        Save the bright colors for the accent pieces, this way if you decide to change things
+                                        up in a few years you’re not totally locked in.
+                                    </p>
+                                </div>
+
+                                <!-- === blog info === -->
+
+                                <div class="blog-info blog-info-bottom">
+                                    <ul>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <i class="fa fa-folder-open"></i>
+                                            <span>
+                                                <a href="$">Furniture Blog</a>, <a href="$">Decorating ideas</a>, <a href="$">Modern living</a>, <a href="$">Floor plans</a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-tag"></i>
+                                            <span>
+                                                <a href="#">Furniture</a>,
+                                                <a href="#">Decorating</a>,
+                                                <a href="#">Starting</a>,
+                                                <a href="#">Apartment</a>,
+                                                <a href="#">Sketch</a>,
+                                                <a href="#">Floor</a>,
+                                                <a href="#">Color</a>,
+                                                <a href="#">Interior</a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div> <!--/blog-info-->
+                            </div>
+                        </div><!--blog-post-->
+                    </div><!--col-sm-8-->
+                </div> <!--/row-->
+            </div><!--/container-->
+        </section>
+
+        <!-- ================== Footer  ================== -->
+
+        {% include 'footer.html' %}
+    </div>
+    <!--/wrapper-->
+
+</body>
+
+</html>
+{% endblock %}

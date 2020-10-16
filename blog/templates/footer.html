@@ -1,0 +1,76 @@
+<footer>
+            <div class="container">
+
+                <div class="footer-showroom">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h2>Посетите нас</h2>
+                            <p>Боконбаева 155/3, Свердловская область</p>
+                            <p>Понедельник-Пятница 9.00-6.00 </p>
+                            <!--&nbsp; &nbsp; | &nbsp; &nbsp; Sun: 12pm - 2 pm-->
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <!-- <a href="#" class="btn btn-clean"><span class="icon icon-map-marker"></span> Get directions</a> -->
+                            <div class="call-us h4"><span class="icon icon-phone-handset"></span> <a href='tel:+996990930'>996-990-930-555</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer links-->
+                <div class="footer-links">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-2">
+                            <h5>Магазин</h5>
+                            <ul>
+                                <li><a href="#">Товары</a></li>
+                                <li><a href="#">Товары</a></li>
+                                <li><a href="#">Товары</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-2">
+                            <h5>Портфолио</h5>
+                            <ul>
+                                <li><a href="#">Наше портфолио</a></li>
+                                <li><a href="#">Наше портфолио</a></li>
+                                <li><a href="#">Наше портфолио</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-2">
+                            <h5>О нас</h5>
+                            <ul>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">О нас</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <h5>Подпишитесь на наши новости</h5>
+                            <p><i>Напишите свою электронную почту чтоб получать новости от нас.</i></p>
+                            <div class="form-group form-newsletter">
+                                <form action="{% url 'subscribe' %}" method="POST">
+                                {% csrf_token %}
+                                <input class="form-control" type="text" name="email" placeholder="Ваш электронный адресс" />
+                                <input type="submit" class="btn btn-clean btn-sm" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer social-->
+
+                <div class="footer-social">
+                    <div class="row">
+                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-6 links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
